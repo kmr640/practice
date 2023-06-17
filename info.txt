@@ -1,0 +1,14 @@
+
+//colors
+bg #fdf7f2 rgba(253, 247, 242, 1) hsla(27, 73%, 97%, 1)
+btn-color #52784f rgba(82, 120, 79, 1) hsla(116, 21%, 39%, 1)
+other #f4d2eb rgba(244, 210, 235, 1) hsla(316, 61%, 89%, 1)
+
+
+source:
+https://dribbble.com/shots/16211602-Web-site-landing-page
+
+
+--i take no ownership for the ui aswell as the code. this is practice material only.
+
+
