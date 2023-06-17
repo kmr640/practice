@@ -1,2 +1,2 @@
 # practice
-This is a practice Repo
+This is an outdated branch diamond landingpage for morre checkout the other branch
