@@ -2,8 +2,6 @@
 
 [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/kmr640.svg?style=social&label=Follow%20%40kmr640)](https://twitter.com/kmr640)
 
-# Diamond - landingpage
-
 ## Description
 Developed from scratch
 
