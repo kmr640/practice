@@ -8,11 +8,6 @@
 Developed from scratch
 
 - Landingpage Using HTML, CSS and Vanilla JavaScript.
-- Contains animations when scrolling.
-- Includes a dark and light mode.
-- Vanilla-tilt JS libary used
-- Compatible with all mobile devices and with a beautiful and pleasant user interface.
-- Figma file included
 
 ## Showcase
 
