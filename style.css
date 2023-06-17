@@ -1,0 +1,330 @@
+/* CSS Reset andy bell co uk */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--black);
+}
+
+/* Make images easier to work with */
+
+/* Inherit fonts for inputs and buttons */
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* css vars */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* fonts */
+  --ff-primary: 'DM Sans', sans-serif;
+  --ff-body: var(--ff-primary);
+  --ff-header: var(--ff-primary);
+  --fw-reg: 400;
+  --fw-md: 500;
+  --fw-b: 700;
+  --fs-500: 1rem; /*body*/
+  --fs-600: 1.125rem; /*nav*/
+  --fs-700: 1.25rem; /*logo*/
+  --fs-800: 2.75rem; /*heading*/
+  --fs-body: var(--fs-500);
+  --fs-nav: var(--fs-600);
+  --fs-logo: var(--fs-700);
+  --fs-heading: var(--fs-800);
+  /* colors */
+  --white: #ffffff;
+  --black: #000000;
+  --clr-accent-1: hsl(236, 93%, 13%); /* h1, p */
+  --clr-accent-2: hsl(213, 57%, 14%); /* nav, logo */
+  --clr-accent-3: hsl(166, 72%, 51%); /* button nav:hover */
+  --p-b: 24px;
+}
+
+@media (max-width: 35em) {
+  :root {
+    /* fonts */
+    --fs-100: .8rem; /*body*/
+    --fs-200: 0.975rem; /*nav*/
+    --fs-300: 1rem; /*logo*/
+    --fs-400: 2.25rem; /*heading*/
+    --fs-body: var(--fs-100);
+    --fs-nav: var(--fs-200);
+    --fs-logo: var(--fs-300);
+    --fs-heading: var(--fs-400);
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .hero-text {
+    order: 1;
+  }
+  .hero-img {
+    order: 2;
+  }
+  .p-b {
+    padding-bottom: 0;
+  }
+  .fs-heading {
+    line-height: normal;
+  }
+  .images {
+    width: 20%;
+  }
+  .social-item li:nth-child(3) > img {
+    width: 25%;
+  }
+  .nav-list > li {
+    display: list-item;
+    padding-bottom: 24px;
+    text-align: center;
+  }
+  header > div {
+    padding-bottom: 24px;
+  }
+  nav > ul > li.clr-cta.cta {
+    position: relative;
+    left: -16px;
+  }
+  nav > ul {
+    padding-top: 32px;
+    display: none;
+  }
+  nav > ul.toggled {
+    display: block;
+  }
+
+  /* animation logo */
+  .logo {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .logo::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #000; /* Specify the desired color of the underline */
+    transition: width 0.3s ease-in-out; /* Add a smooth transition effect */
+    transform-origin: right bottom;
+    width: 0;
+  }
+  
+  .logo:hover::after,
+  .logo:focus::after {
+    width: 100%;
+  }
+}
+
+@media (max-width: 60em) {
+  :root {
+    /* fonts */
+    --fs-100: .8rem; /*body*/
+    --fs-200: 0.975rem; /*nav*/
+    --fs-300: 1rem; /*logo*/
+    --fs-400: 2rem; /*heading*/
+    --fs-body: var(--fs-100);
+    --fs-nav: var(--fs-200);
+    --fs-logo: var(--fs-300);
+    --fs-heading: var(--fs-400);
+  }
+  .images {
+    max-width: 25%;
+  }
+  .social-item li:nth-child(3) > img {
+    width: 35%;
+  }
+}
+
+/* utilities */
+/* font classes */
+.fs-body { font-size: var(--fs-body); }
+.fs-nav { font-size: var(--fs-nav); }
+.fs-logo { font-size: var(--fs-logo); }
+.fs-heading { font-size: var(--fs-heading); }
+.fw-reg { font-weight: var(--fw-reg); }
+.fw-md { font-weight: var(--fw-md); }
+.fw-b { font-weight: var(--fw-b); }
+/* font colors */
+.clr-header { color: var(--clr-accent-1); }
+.clr-nav,
+.clr-logo { color: var(--clr-accent-2); }
+.clr-cta:hover { color: var(--clr-accent-3); }
+.clr-btn { background-color: var(--clr-accent-3); }
+.p-b { padding-bottom: var(--p-b); }
+/* layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-inline: auto;
+  max-width: 1280px;
+  padding: 24px;
+}
+
+.one {
+  grid-row: span 2;
+}
+
+/* layout END */
+/* style css */
+body {
+  font-family: var(--ff-primary);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+nav ul li {
+  display: inline;
+  padding-right: 2rem;
+}
+
+nav ul li:nth-child(4) {
+  padding-right: 0;
+}
+
+button {
+  border: none;
+  color: var(--white);
+  padding: .75rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+button:hover {
+  background-color: #FFDC6B;
+}
+
+.clr-cta a:hover {
+  color: #28DDB2;
+  font-weight: var(--fw-b);
+}
+
+.fs-heading {
+  line-height: 1.75;
+  text-transform: capitalize;
+  max-width: 16ch;
+}
+
+.hero-text p {
+  line-height: 2rem;
+  max-width: 48ch;
+}
+
+.hero-img img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.hero-text ul li {
+  display: inline;
+  padding-right: 1.5rem;
+}
+
+.hero-text ul li:nth-child(2) {
+  position: relative;
+  top: 2px;
+}
+
+.hero-text ul li:nth-child(3) {
+  position: relative;
+  bottom: 2px;
+  padding-right: 0;
+}
+
+.hero-text ul {
+  padding-left: 0;
+  padding-top: 1rem;
+}
+
+/* animation */
+
+.underline-right {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-right::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  background-color: #28DDB2; /* Specify the desired color of the underline */
+  transition: width 0.3s ease-in-out; /* Add a smooth transition effect */
+  transform-origin: right bottom;
+  width: 0;
+}
+
+.underline-right:hover::after,
+.underline-right:focus::after {
+  width: 100%;
+}
